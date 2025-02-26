@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Programación</title>
+    <div class="theme-toggle">
+        <button id="themeToggle" class="theme-toggle-btn">
+            <span class="light-icon">☀️</span>
+            <span class="dark-icon">🌙</span>
+        </button>
+    </div>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.7.32/sweetalert2.all.min.js"></script>
+</head>
+<body>
+    <!-- Página Principal -->
+    <div id="mainPage" class="container">
+        <div class="welcome">
+            <h1>🌟💻 Bienvenido al Curso de Programación Estructurada y Programación Orientada a Objetos 🌟</h1>
+            <p class="quote">"Aprender a programar es aprender a pensar de una manera diferente." - Steve Jobs</p>
+        </div>
+        <div class="index">
+            <h3>Indice</h3>
+            <p>Para ir rapido si esque estaba leyendo y te quedaste en un tema =D</p>
+            <ul>
+                <li><a href="#1-programacion-estructurada">📝 Programación Estructurada</a></li>
+                <li><a href="#2-poo">🤔 Programación Orientada a Objetos (POO)</a></li>
+                <li><a href="#3-conceptos-poo">💭 Conceptos Básicos de POO</a></li>
+                
+                <li><a href="#4-sugerencias">🔥 Dejanos tu sugerencia 🔥</a></li>
+            </ul>
+        </div>
+
+        <!-- SECCIÓN DE PROGRAMACIÓN ESTRUCTURADA -->
+        <div id="programacion-estructurada" class="section">
+            <h2>📝 Programación Estructurada 📝</h2>
+            <div class="imagen-container">
+                <img src="estruturada.jpg" alt="Programación Estructurada" class="centered-image6">
+                
+                <h3>¿Qué es la Programación Estructurada?</h3>
+                <p>
+                    Es un paradigma de programación que surgió en la década de 1960. Este enfoque 
+                    enfatiza la importancia de escribir código de manera organizada y fácil de entender, utilizando tres 
+                    estructuras básicas de control.
+                </p>
+                
+                <h3>Estructuras Básicas de Control</h3>
+                <ul>
+                    <li>🔄 <strong>Secuencia:</strong> Ejecutar instrucciones una después de otra</li>
+                    <li>🔀 <strong>Selección:</strong> Tomar decisiones usando estructuras como IF-THEN-ELSE</li>
+                    <li>🔁 <strong>Iteración:</strong> Repetir acciones usando bucles como WHILE y FOR</li>
+                </ul>
+                
+                <h3>Conceptos Básicos en Programación Estructurada</h3>
+                
+                <!-- VARIABLES -->
+                <div class="concept-box">
+                    <h4>1. Variables</h4>
+                    <p>Un contenedor que nos permite almacenar información en la memoria del ordenador para su uso posterior. 
+                        Estos datos pueden ser de varios tipos, como números, texto o valores verdadero/falso.</p>
+                    <div class="example">
+                        <pre>
+nombre = "Boris"         # Almacena texto (string)
+edad = 20                # Almacena un número entero (integer)
+altura = 1.77            # Almacena un número decimal (float)
+es_estudiante = True     # Almacena un valor Booleano (true o false)
+                        </pre>
+                    </div>
+                    <div class="explanation">
+                        <p><strong>Explicación:</strong> En este ejemplo creamos 4 variables diferentes:
+                            <ul>
+                                <li>"nombre" guarda texto, por lo que es de tipo string</li>
+                                <li>"edad" guarda un número entero, por lo que es de tipo integer</li>
+                                <li>"altura" guarda un número con decimales, por lo que es de tipo float</li>
+                                <li>"es_estudiante" guarda un valor verdadero/falso, por lo que es de tipo booleano</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- CONDICIONALES -->
+                <div class="concept-box">
+                    <h4>2. Condicionales</h4>
+                    <p>Estructuras que permiten tomar decisiones en nuestro código, ejecutando diferentes bloques dependiendo de si se cumple una condición.</p>
+                    
+                    <h5>Estructura IF-ELSE</h5>
+                    <div class="example">
+                        <pre>
+temperatura = 38
+if temperatura >= 37.5:
+    print("Tienes fiebre")
+else:
+    print("Temperatura normal")
+                        </pre>
+                    </div>
+                    <div class="explanation">
+                        <p><strong>Explicación:</strong> 
+                            <ul>
+                                <li>Primero definimos la variable "temperatura" con valor 38</li>
+                                <li>La estructura "if" evalúa si la temperatura es mayor o igual a 37.5</li>
+                                <li>Como 38 es mayor que 37.5, la condición es verdadera</li>
+                                <li>Por lo tanto, se ejecuta el código dentro del "if" y muestra "Tienes fiebre"</li>
+                                <li>El código dentro del "else" no se ejecuta en este caso</li>
+                            </ul>
+                        </p>
+                    </div>
+                    
+                    <h5>Estructura IF-ELIF-ELSE</h5>
+                    <div class="example">
+                        <pre>
+calificacion = 85
+if calificacion >= 90:
+    print("Excelente, A")
+elif calificacion >= 80:
+    print("Muy bien, B")
+elif calificacion >= 70:
+    print("Bien, C")
+else:
+    print("Necesitas mejorar")
+                        </pre>
+                    </div>
+                    <div class="explanation">
+                        <p><strong>Explicación:</strong> 
+                            <ul>
+                                <li>Definimos la variable "calificacion" con valor 85</li>
+                                <li>La primera condición (calificacion >= 90) es falsa, así que pasamos a la siguiente</li>
+                                <li>La segunda condición (calificacion >= 80) es verdadera (85 es mayor que 80)</li>
+                                <li>Por lo tanto, se ejecuta el código dentro de ese "elif" y muestra "Muy bien, B"</li>
+                                <li>El resto de condiciones no se evalúan</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- BUCLES -->
+                <div class="concept-box">
+                    <h4>3. 🌀 Bucles 🌀</h4>
+                    <p>Los bucles permiten repetir un bloque de código varias veces. Existen dos tipos principales de bucles:</p>
+                    
+                    <h5>Bucle FOR</h5>
+                    <p>Se utiliza cuando sabes exactamente cuántas veces quieres repetir un bloque de código.</p>
+                    <div class="example">
+                        <pre>
+# Imprime números del 0 al 4
+for i in range(5):
+    print(i)
+                            
+# Recorrer una lista
+frutas = ["manzana", "pera", "uva", "cereza"]
+for fruta in frutas:
+    print(f"Me gusta la {fruta}")
+                            
+# For con range específico (del 1 al 20)
+for num in range(1, 21):
+    print(num)
+                        </pre>
+                    </div>
+                    <div class="explanation">
+                        <p><strong>Explicación:</strong> 
+                            <ul>
+                                <li>Primer ejemplo: La función range(5) genera una secuencia de números del 0 al 4. El bucle asigna cada valor a la variable "i" y ejecuta el código dentro del bucle.</li>
+                                <li>Segundo ejemplo: El bucle recorre cada elemento de la lista "frutas" y lo asigna a la variable "fruta". Luego muestra un mensaje para cada fruta.</li>
+                                <li>Tercer ejemplo: range(1, 21) genera números del 1 al 20. El bucle imprime cada número.</li>
+                            </ul>
+                        </p>
+                    </div>
+                    
+                    <h5>Bucle WHILE</h5>
+                    <p>Se ejecuta mientras una condición sea verdadera. Es útil cuando no sabes exactamente cuántas iteraciones necesitas.</p>
+                    <div class="example">
+                        <pre>
+# Ejemplo con contraseña
+contraseña = ""
+while contraseña != "boris777":
+    contraseña = input("Ingresa la contraseña: ")
+print("¡Acceso concedido!")
+
+# Contador con while
+contador = 1
+while contador <= 5:
+    print(f"Iteración número {contador}")
+    contador += 1
+                        </pre>
+                    </div>
+                    <div class="explanation">
+                        <p><strong>Explicación:</strong> 
+                            <ul>
+                                <li>Primer ejemplo: Inicialmente, la variable "contraseña" está vacía. El bucle se ejecuta mientras la contraseña no sea "boris777". En cada iteración, pide al usuario ingresar una contraseña. Cuando el usuario ingresa "boris777", la condición se vuelve falsa y el bucle termina.</li>
+                                <li>Segundo ejemplo: El contador comienza en 1 y el bucle se ejecuta mientras sea menor o igual a 5. En cada iteración, muestra el valor actual y lo incrementa en 1. Después de 5 iteraciones, el contador será 6 y el bucle terminará.</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FUNCIONES -->
+                <div class="concept-box">
+                    <h4>4. Funciones</h4>
+                    <p>Las funciones son bloques de código reutilizable que realizan una tarea específica:</p>
+                    <div class="example">
+                        <pre>
+# Función simple sin parámetros
+def saludar():
+    print("Hola guap@")
+                            
+# Llamar la función
+saludar()
+
+# Función con parámetros
+def sumar(a, b):
+    resultado = a + b
+    return resultado
+
+# Llamar la función con argumentos
+total = sumar(5, 3)
+print(f"La suma es: {total}")
+                        </pre>
+                    </div>
+                    <div class="explanation">
+                        <p><strong>Explicación:</strong> 
+                            <ul>
+                                <li>Primer ejemplo: Definimos una función llamada "saludar" que imprime un mensaje. Al llamar a la función con saludar(), se ejecuta el código dentro de la función.</li>
+                                <li>Segundo ejemplo: Definimos una función "sumar" que recibe dos parámetros (a y b), calcula su suma y devuelve el resultado. Al llamar a sumar(5, 3), la función retorna 8, que se almacena en la variable "total".</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- MODULARIDAD -->
+                <div class="concept-box">
+                    <h4>5. Modularidad</h4>
+                    <p>El principio de dividir el programa en partes más pequeñas (módulos) que pueden funcionar independientemente. Cada módulo maneja una tarea específica, haciendo que el código sea más organizado y fácil de mantener.</p>
+                    
+                    <h5>Ejemplo de programa modular: Calculadora</h5>
+                    <p>Archivo: operaciones.py</p>
+                    <div class="example">
+                        <pre>
+def sumar(a, b):
+    return a + b
+
+def restar(a, b):
+    return a - b
+
+def multiplicar(a, b):
+    return a * b
+
+def dividir(a, b):
+    if b != 0:
+        return a / b
+    return "Error: División por cero"
+                        </pre>
+                    </div>
+                    
+                    <p>Archivo: validaciones.py</p>
+                    <div class="example">
+                        <pre>
+def validar_numero(numero):
+    try:
+        float(numero)
+        return True
+    except ValueError:
+        return False
+
+def validar_operacion(op):
+    operaciones_validas = ['+', '-', '*', '/']
+    return op in operaciones_validas
+                        </pre>
+                    </div>
+                    
+                    <p>Archivo: interfaz.py</p>
+                    <div class="example">
+                        <pre>
+from operaciones import sumar, restar, multiplicar, dividir
+from validaciones import validar_numero, validar_operacion
+
+def realizar_operacion():
+    # Obtener primer número
+    num1 = input("Ingrese primer número: ")
+    if not validar_numero(num1):
+        return "Error: Primer número no válido"
+    
+    # Obtener operación
+    operacion = input("Ingrese operación (+, -, *, /): ")
+    if not validar_operacion(operacion):
+        return "Error: Operación no válida"
+    
+    # Obtener segundo número
+    num2 = input("Ingrese segundo número: ")
+    if not validar_numero(num2):
+        return "Error: Segundo número no válido"
+    
+    # Convertir a float
+    num1 = float(num1)
+    num2 = float(num2)
+    
+    # Realizar calculo
+    if operacion == '+':
+        resultado = sumar(num1, num2)
+    elif operacion == '-':
+        resultado = restar(num1, num2)
+    elif operacion == '*':
+        resultado = multiplicar(num1, num2)
+    else:
+        resultado = dividir(num1, num2)
+    
+    return f"Resultado: {resultado}"
+                        </pre>
+                    </div>
+                    
+                    <p>Archivo: main.py</p>
+                    <div class="example">
+                        <pre>
+from interfaz import realizar_operacion
+
+def main():
+    print("Calculadora Modular")
+    print("-" * 20)
+    resultado = realizar_operacion()
+    print(resultado)
+
+if __name__ == "__main__":
+    main()
+                        </pre>
+                    </div>
+                    
+                    <div class="explanation">
+                        <p><strong>Explicación de la modularidad:</strong> 
+                            <ul>
+                                <li>Cada archivo tiene una responsabilidad específica:
+                                    <ul>
+                                        <li><strong>operaciones.py:</strong> Contiene las funciones matemáticas básicas</li>
+                                        <li><strong>validaciones.py:</strong> Contiene funciones para validar los datos ingresados</li>
+                                        <li><strong>interfaz.py:</strong> Maneja la interacción con el usuario</li>
+                                        <li><strong>main.py:</strong> Punto de entrada principal del programa</li>
+                                    </ul>
+                                </li>
+                                <li>Esta organización hace que el código sea:
+                                    <ul>
+                                        <li>Más fácil de entender: cada archivo tiene un propósito claro</li>
+                                        <li>Más fácil de mantener: si hay que cambiar una operación, solo se modifica operaciones.py</li>
+                                        <li>Más reutilizable: las funciones de validación pueden usarse en otros proyectos</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="concept-box">
+            <h4>6. Arreglos (Arrays)</h4>
+            <p>Un arreglo es una estructura de datos que permite almacenar una colección de elementos del mismo tipo. Es útil para manejar múltiples valores bajo un solo nombre.</p>
+            
+            <h5>Ejemplo de arreglo en Python</h5>
+            <div class="example">
+                <pre>
+    # Crear un arreglo de números
+    numeros = [10, 20, 30, 40, 50]
+    
+    # Acceder a elementos del arreglo
+    print(numeros[0])  # Imprime 10 (primer elemento)
+    print(numeros[2])  # Imprime 30 (tercer elemento)
+    
+    # Modificar un elemento del arreglo
+    numeros[1] = 25
+    print(numeros)  # Imprime [10, 25, 30, 40, 50]
+    
+    # Recorrer un arreglo con un bucle for
+    for num in numeros:
+        print(num)  # Imprime cada numero en el arreglo
+                </pre>
+            </div>
+            <div class="explanation">
+                <p><strong>Explicación:</strong> 
+                    <ul>
+                        <li>Se crea un arreglo llamado NUMEROS que contiene 5 elementos.</li>
+                        <li>Los elementos se acceden usando un índice (por ejemplo, <code>numeros[0]</code> para el primer elemento).</li>
+                        <li>Los arreglos son mutables, por lo que puedes cambiar sus elementos (por ejemplo, <code>numeros[1] = 25</code>).</li>
+                        <li>Puedes recorrer todos los elementos del arreglo usando un bucle <code>for</code>.</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+    
+
+        <!-- SECCIÓN DE PROGRAMACIÓN ORIENTADA A OBJETOS -->
+        <div id="poo" class="section">
+            <h2>🤔 Programación Orientada a Objetos (POO) 🤔</h2>
+            <div class="imagen-container">
+                <img src="rubik.jpg" alt="Concepto de POO" class="centered-image">
+                <h3>¿Qué es la POO?</h3>
+                <p>La programación orientada a objetos (POO) es un paradigma de programación basado en la idea de modelar el mundo real utilizando objetos, que son entidades que combinan datos (atributos o propiedades) y comportamiento (métodos o funciones).
+                En POO, en lugar de escribir todo el código en una estructura enorme, se divide el programa en partes más pequeñas y organizadas llamadas clases. Una clase es como una plantilla que define las propiedades y el comportamiento que estarán presentes en los objetos creados a partir de ella.
+                </p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>¿Para qué funciona la POO?</h3>
+            <div class="imagen-container2">
+                <img src="pooxd.jpg" alt="para qué sirve POO" class="centered-image2">
+                <p>La POO funciona para estructurar y organizar el código de una manera más clara, reutilizable y fácil de mantener. Se usa en una gran variedad de aplicaciones, desde videojuegos hasta sistemas empresariales.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>📹 Breve Historia de POO 📹</h3>
+            <div class="iamgen-container3">
+                <img src="historia poo.jpg" alt="imagen de historia" class="centered-image3">
+                <p>La programación orientada a objetos surgió para resolver problemas relacionados con la complejidad del software. Su desarrollo más significativo incluye:</p>
+                <ul>
+                    <li><strong>Años 60:</strong> Simula, primer lenguaje con conceptos de POO (clases, objetos y herencia)</li>
+                    <li><strong>Años 70:</strong> Smalltalk, primer lenguaje totalmente orientado a objetos</li>
+                    <li><strong>Años 80-90:</strong> C++, Java y otros lenguajes popularizan la POO</li>
+                    <li><strong>Actualidad:</strong> La mayoría de lenguajes modernos incorporan conceptos de POO</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="conceptos-poo" class="section">
+            <h3>💭 Conceptos Básicos de POO 💭</h3>
+            
+            <div class="concept-box">
+                <h4>1. Clase</h4>
+                <p>Una clase es como un molde o una plantilla para crear objetos. Imagina que tienes un plano de un coche, pero aún no es un coche real, solo un diseño.</p>
+                <div class="example">
+                    <pre>
+class Camioneta {
+    String marca;
+    String modelo;
+    
+    void arrancar() {
+        System.out.println("La camioneta arranca");
+    }
+}
+                    </pre>
+                </div>
+                <div class="explanation">
+                    <ul>
+                        <li>La clase Camioneta es el plano o diseño</li>
+                        <li>marca y modelo son los atributos (características de la camioneta)</li>
+                        <li>arrancar() es un método (acción que puede realizar la camioneta)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="concept-box">
+                <h4>2. Objeto</h4>
+                <p>Un objeto es una instancia específica de una clase. Representa una entidad concreta con sus propios valores de atributos.</p>
+                <div class="example">
+                    <pre>
+Camioneta miCamioneta = new Camioneta();
+miCamioneta.marca = "Toyota";
+miCamioneta.modelo = "Hilux";
+miCamioneta.arrancar();  // Imprime: La camioneta arranca
+                    </pre>
+                </div>
+                <div class="explanation">
+                    <ul>
+                        <li>miCamioneta es un objeto creado a partir de la clase Camioneta</li>
+                        <li>Se le asigna la marca "Toyota" y el modelo "Hilux"</li>
+                        <li>Podemos llamar al método arrancar() para este objeto específico</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="concept-box">
+                <h4>3. Instancia</h4>
+                <p>Una instancia es un objeto específico creado a partir de una clase. Cada instancia tiene sus propios valores de atributos independientes.</p>
+                <div class="example">
+                    <pre>
+Camioneta camioneta1 = new Camioneta();  // Primera instancia
+Camioneta camioneta2 = new Camioneta();  // Segunda instancia
+
+camioneta1.marca = "Toyota";
+camioneta1.modelo = "Hilux";
+
+camioneta2.marca = "Ford";
+camioneta2.modelo = "Ranger";
+                    </pre>
+                </div>
+                <div class="explanation">
+                    <ul>
+                        <li>camioneta1 y camioneta2 son dos instancias diferentes de la clase Camioneta</li>
+                        <li>Cada instancia tiene sus propios valores para marca y modelo</li>
+                        <li>Modificar los atributos de camioneta1 no afecta a camioneta2</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="concept-box">
+                <h4>4. Pilares de la POO</h4>
+                <ul>
+                    <li>Encapsulamiento</li>
+                    <li>Herencia</li>
+                    <li>Polimorfismo</li>
+                    <li>Abstracion</li>
+                    <li>Interfaz</li>
+                </ul>
+            </div>
+        </div>
+
+        <button onclick="showLanguageSelection()" class="next-btn">Siguiente</button>
+    </div>
+
+    <!-- Página de Selección de Lenguaje -->
+    <div id="languagePage" class="container" style="display: none;">
+        <h2>Selecciona tu lenguaje preferido:</h2>
+        <div class="language-selection">
+            <button onclick="selectLanguage('java☕')" class="language-btn">Java</button>
+            <button onclick="selectLanguage('python🐍')" class="language-btn">Python</button>
+        </div>
+    </div>
+
+    <!-- Página de Principios -->
+    <div id="principlePage" class="container" style="display: none;">
+        <h2 id="principleTitle"></h2>
+        <div id="principleContent"></div>
+        <div id="codeExample" class="example"></div>
+        <div id="codeExplanation" class="explanation"></div>
+        <div class="navigation-buttons">
+            <button onclick="previousPrinciple()" class="nav-btn" id="prevBtn">Anterior</button>
+            <button onclick="nextPrinciple()" class="nav-btn" id="nextBtn">Siguiente</button>
+        </div>
+    </div>
+
+    <!-- Página de Examen -->
+    <div id="examPage" class="container" style="display: none;">
+        <div class="timer">Tiempo restante: <span id="countdown">3:00</span></div>
+        <div id="questionContainer"></div>
+        <button onclick="submitExam()" class="submit-btn">Entregar Examen</button>
+    </div>
+
+    <!-- Agrega este código donde quieras que aparezca la caja de sugerencias -->
+    <div id="sugerencias" class="suggestion-box">
+        <h3>🔥Dejanos tu sugerencia🔥</h3>
+        <form class="suggestion-form" id="suggestionForm">
+            <textarea 
+                placeholder="Escribe tu comentario aquí..." 
+                id="suggestionText" 
+                required
+            ></textarea>
+            <button type="submit">Enviar Sugerencia</button>
+        </form>
+        <div class="suggestions-list" id="suggestionsList">
+            <!-- Aquí se mostrarán las sugerencias -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
